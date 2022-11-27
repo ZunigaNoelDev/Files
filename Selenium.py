@@ -71,4 +71,4 @@ def ParseCookies(data):
   return data[0]+"&&&"+cookieString
 
 
-ParseCookies(LoadCookies())
+print(ParseCookies(LoadCookies()))
