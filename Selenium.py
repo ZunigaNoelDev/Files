@@ -68,7 +68,7 @@ def ParseCookies(data):
 
   cookieString = f"__RequestVerificationToken={rvt}; .AspNet.ApplicationCookie={aspnetAppC}; ASP.NET_SessionId={aspnetSID}; VitSecCookie={vitsecC}; _hjSessionUser_2054357={hjSU}; _hjFirstSeen={hJFS}; _hjSession_2054357={hJS}; _hjAbsoluteSessionInProgress={hJASIP}; Connected={Connected}; AWSALB={AWSALB}; AWSALBCORS={AWSALB}"
 
-  return [data[0], cookieString]
+  return data[0]+"&&&"+cookieString
 
 
-print(ParseCookies(LoadCookies()))
+ParseCookies(LoadCookies())
